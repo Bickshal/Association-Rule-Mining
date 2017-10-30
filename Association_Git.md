@@ -1,15 +1,8 @@
 Association Rule Mining - Market Basket Analysis
 ================
 
-GitHub Documents
-----------------
-
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
-
-Including Code
---------------
-
-You can include R code in the document as follows:
+Association Rule Mining
+-----------------------
 
 ``` r
 library(tidyverse)
@@ -333,12 +326,12 @@ rules <- apriori(tr, parameter = list(supp=0.001, conf=0.8))
     ## Absolute minimum support count: 16 
     ## 
     ## set item appearances ...[0 item(s)] done [0.00s].
-    ## set transactions ...[24565 item(s), 16767 transaction(s)] done [0.07s].
+    ## set transactions ...[24565 item(s), 16767 transaction(s)] done [0.10s].
     ## sorting and recoding items ... [2511 item(s)] done [0.01s].
     ## creating transaction tree ... done [0.01s].
-    ## checking subsets of size 1 2 3 4 5 6 7 8 9 10 done [0.90s].
-    ## writing ... [180328 rule(s)] done [0.11s].
-    ## creating S4 object  ... done [0.12s].
+    ## checking subsets of size 1 2 3 4 5 6 7 8 9 10 done [0.73s].
+    ## writing ... [180328 rule(s)] done [0.08s].
+    ## creating S4 object  ... done [0.11s].
 
 ``` r
 rules <- sort(rules, by='confidence', decreasing = TRUE)
